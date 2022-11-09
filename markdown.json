@@ -1,0 +1,109 @@
+{
+	// Place your snippets for markdown here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+    "mermaid classDiagram": {
+        "prefix": "mermaid:classDiagram",
+        "body": [
+            "``` mermaid\n\nclassDiagram\n$0\n```"
+        ],
+        "description": "mermaid classDiagram"
+    },
+    "mermaid classDiagram class": {
+        "prefix": "mermaid:classDiagram:class",
+        "body": [
+            "class A{ \n  +String ${name:variable} \n  -${name:method}()\n}"
+        ],
+        "description": "mermaid classDiagram class"
+    },
+    "mermaid classDiagram inherit": {
+        "prefix": "mermaid:classDiagram:inherit",
+        "body": [
+            "${name:A} <|-- ${name:B}"
+        ],
+        "description": "mermaid classDiagram inherit"
+    },
+    "mermaid classDiagram realization": {
+        "prefix": "mermaid:classDiagram:realization",
+        "body": [
+            "${name:A} <|.. ${name:B}"
+        ],
+        "description": "mermaid classDiagram realization"
+    },
+    "mermaid classDiagram association": {
+        "prefix": "mermaid:classDiagram:association",
+        "body": [
+            "${name:A} <-- ${name:B}: 1..1"
+        ],
+        "description": "mermaid classDiagram association"
+    },
+    "mermaid classDiagram dependency": {
+        "prefix": "mermaid:classDiagram:dependency",
+        "body": [
+            "${name:A} <.. ${name:B}: 1..1"
+        ],
+        "description": "mermaid classDiagram dependency"
+    },
+    "mermaid classDiagram Composition": {
+        "prefix": "mermaid:classDiagram:Composition",
+        "body": [
+            "${name:A} *-- ${name:B}"
+        ],
+        "description": "mermaid classDiagram Composition"
+    },
+    "mermaid classDiagram aggregation": {
+        "prefix": "mermaid:classDiagram aggregation",
+        "body": [
+            "${name:A} o-- ${name:B}"
+        ],
+        "description": "mermaid classDiagram aggregation"
+    },
+    "mermaid classDiagram link-D": {
+        "prefix": "mermaid:classDiagram:link-D",
+        "body": [
+            "${name:A} .. ${name:B}: 1..1"
+        ],
+        "description": "mermaid classDiagram link-D"
+    },
+    "mermaid classDiagram link-S": {
+        "prefix": "mermaid:classDiagram:link-D",
+        "body": [
+            "${name:A} -- ${name:B}: 1..1"
+        ],
+        "description": "mermaid classDiagram link-S"
+    },
+    "mermaid flowchart demo": {
+        "prefix": "mermaid:flowchart:demo",
+        "body": [
+            "``` mermaid\n\ngraph TD     \n    A[Start] --> B{Is it?};\n    B -->|Yes| C[OK];\n    C --> D[Rethink];\n    D --> B;\n    B ---->|No| E[End];$0\n\n```"
+        ],
+        "description": "mermaid flowchart demo"
+    },
+    "plantuml": {
+        "prefix": "plantuml",
+        "body": [
+            "``` plantuml\n\n@startuml\n    $0\n@enduml\n```"
+        ],
+        "description": "plantuml"
+    },
+
+    "plantuml mind demo": {
+        "prefix": "plantuml:mind:demo",
+        "body": [
+            "``` plantuml\n\n @startmindmap\n+[#17ADF1] 项目\n++[#lightgreen] 分解任务\n+++_ 任务1\n+++_ 任务2\n--[#red] 前置条件\n---_ 前置1\n---_ 前置2\n\n@endmindmap $0 \n```"
+        ],
+        "description": "plantuml mind demo"
+    },
+
+    "plantuml sequence demo": {
+        "prefix": "plantuml:sequence:demo",
+        "body": [
+            "``` plantuml\n@startuml\n\nautonumber\n\nactor \"用户\" as User\nparticipant \"浏览器\" as Browser\nparticipant \"服务端\" as Server #orange\n\nactivate User\n\nUser -> Browser: 输入 URL\nactivate Browser\n\nBrowser -> Server: 请求服务器\nactivate Server\n\nServer -> Server: 模板渲染\nnote right of Server: 这是一个注释\n\nServer -> Browser: 返回 HTML\ndeactivate Server\n\nBrowser --> User\n\n@enduml\n```"
+        ],
+        "description": "plantuml sequence demo"
+    },
+
+
+}
